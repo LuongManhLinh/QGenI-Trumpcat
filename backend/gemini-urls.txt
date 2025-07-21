@@ -1,0 +1,3 @@
+https://gemini-proxy.politesand-ba5b0a1c.japaneast.azurecontainerapps.io/ask?prompt=hello
+http://gemini-proxy-dev.ap-northeast-2.elasticbeanstalk.com/ask?prompt=hi
+AIzaSyCG_kV19TF-UyRx3mESCano-oly8P-1u80
