@@ -9,7 +9,6 @@ chatbot_bp = Blueprint('chatbot_bp', __name__)
 
 
 
-
 @chatbot_bp.route("/api/chatbot", methods=['POST'])
 @jwt_required()
 def ask():
