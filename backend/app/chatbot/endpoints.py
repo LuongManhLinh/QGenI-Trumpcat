@@ -7,7 +7,7 @@ import json
 
 chatbot_bp = Blueprint('chatbot_bp', __name__)
 
-gemini_API_key = "AIzaSyB-mjp-5UpuRzVS9hZqaAc1vZXp9jtA3QU"
+
 
 
 @chatbot_bp.route("/api/chatbot", methods=['POST'])
