@@ -159,7 +159,7 @@ QGenI-Trumpcat/
 ```bash
 cd backend
 pip install -r requirements.txt
-python run.py
+GEMINI_API_KEY=your_gemini_api_key python run.py
 ```
 
 ### Frontend Setup
