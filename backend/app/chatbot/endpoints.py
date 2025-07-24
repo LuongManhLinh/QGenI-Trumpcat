@@ -8,7 +8,7 @@ import os
 
 chatbot_bp = Blueprint('chatbot_bp', __name__)
 
-gemini_API_key = "AIzaSyCaEzRwo8isIROlaulWOC1pfBrOZwffaPc"
+gemini_API_key = os.getenv("GEMINI_API_KEY")
 
 @chatbot_bp.route("/api/chatbot", methods=['POST'])
 @jwt_required()
