@@ -22,6 +22,8 @@ private val DarkColorScheme = darkColorScheme(
     onBackground = Color.White,
     surfaceContainerHighest = AsianSkin,
     tertiaryContainer = OceanEyes,
+    error = Incorrect,
+    onError = Correct
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -34,6 +36,8 @@ private val LightColorScheme = lightColorScheme(
     onBackground = Color.Black,
     surfaceContainerHighest = AsianSkin,
     tertiaryContainer = OceanEyes,
+    error = IncorrectIntense,
+    onError = CorrectIntense
 )
 
 @Composable

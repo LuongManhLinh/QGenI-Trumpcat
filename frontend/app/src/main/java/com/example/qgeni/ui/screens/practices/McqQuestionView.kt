@@ -71,17 +71,9 @@ fun McqQuestionView(
     }
 
     val completedColor: Color = if (correct) {
-            if (isSystemInDarkTheme()) {
-                colorResource(R.color.correct)
-            } else {
-                colorResource(R.color.correct_intense)
-            }
+            MaterialTheme.colorScheme.onError
         } else {
-            if (isSystemInDarkTheme()) {
-                colorResource(R.color.incorrect)
-            } else {
-                colorResource(R.color.incorrect_intense)
-            }
+            MaterialTheme.colorScheme.error
         }
 
 

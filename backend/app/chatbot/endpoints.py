@@ -4,10 +4,11 @@ import requests
 from ..util import jsonify
 from .data_access import ChatbotHistoryService, ChatConversation
 import json
+import os
 
 chatbot_bp = Blueprint('chatbot_bp', __name__)
 
-
+gemini_API_key = "AIzaSyCaEzRwo8isIROlaulWOC1pfBrOZwffaPc"
 
 @chatbot_bp.route("/api/chatbot", methods=['POST'])
 @jwt_required()

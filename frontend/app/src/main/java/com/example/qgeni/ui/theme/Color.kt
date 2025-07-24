@@ -20,3 +20,8 @@ val OceanEyes = Color(0xff92B9E3)
 val SadCloud = Color(0xFFC1C7D0)
 val Soul = Color(0xFFF2DDDC)
 val PastelGreen = Color(0xFF77DD77)
+
+val Correct = Color(0xFFe6f4ea)
+val Incorrect = Color(0xFFdf95a4)
+val IncorrectIntense = Color(0xFFff6e57)
+val CorrectIntense = Color(0xFF1e8e3e)

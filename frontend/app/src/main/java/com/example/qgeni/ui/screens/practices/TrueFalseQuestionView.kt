@@ -49,7 +49,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.qgeni.R
 import com.example.qgeni.data.model.McqQuestion
+import com.example.qgeni.data.preferences.ThemeMode
 import com.example.qgeni.ui.theme.QGenITheme
+import com.example.qgeni.utils.ContextConstants
 
 /*
     Phần hiển thị câu hỏi và trả lời cho ReadingPracticeScreen
@@ -72,17 +74,9 @@ fun TrueFalseQuestionView(
     var color: Color = Color.Black
     if(uiState.isComplete) {
         color = if (uiState.correctAnswerList[uiState.currentQuestionIndex]) {
-            if (isSystemInDarkTheme()) {
-                colorResource(R.color.correct)
-            } else {
-                colorResource(R.color.correct_intense)
-            }
+            MaterialTheme.colorScheme.onError
         } else {
-            if (isSystemInDarkTheme()) {
-                colorResource(R.color.incorrect)
-            } else {
-                colorResource(R.color.incorrect_intense)
-            }
+            MaterialTheme.colorScheme.error
         }
     }
 

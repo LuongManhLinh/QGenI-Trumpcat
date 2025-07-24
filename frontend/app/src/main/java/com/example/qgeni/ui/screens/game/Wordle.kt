@@ -25,6 +25,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.qgeni.AppContextHolder
+import com.example.qgeni.BuildConfig
 import com.example.qgeni.data.model.achievement.Achievement
 import com.example.qgeni.data.preferences.JwtPreferenceManager
 import com.example.qgeni.ui.screens.components.CustomSolidButton
@@ -96,7 +97,7 @@ fun WordleGame(
     fun submitWordleResult(wordLength: Int, guessesCount: Int, timeSeconds: Long) {
         scope.launch(Dispatchers.IO) {
             try {
-                val urlStr = "https://trumpcat-server.politesand-ba5b0a1c.japaneast.azurecontainerapps.io/api/wordle/submit"
+                val urlStr = "${BuildConfig.BASE_URL}/api/wordle/submit"
                 val token = JwtPreferenceManager.getJwtFlow(AppContextHolder.appContext)
 
                 val connection = (URL(urlStr).openConnection() as HttpURLConnection).apply {
@@ -132,7 +133,7 @@ fun WordleGame(
     fun fetchLeaderboard() {
         scope.launch(Dispatchers.IO) {
             try {
-                val urlStr = "https://trumpcat-server.politesand-ba5b0a1c.japaneast.azurecontainerapps.io/api/wordle/leaderboard/$wordLength"
+                val urlStr = "${BuildConfig.BASE_URL}/api/wordle/leaderboard/$wordLength"
                 val token = JwtPreferenceManager.getJwtFlow(AppContextHolder.appContext)
 
                 val connection = (URL(urlStr).openConnection() as HttpURLConnection).apply {
@@ -605,7 +606,7 @@ data class LeaderboardEntry(val userId: Int, val userName: String, val guesses: 
 // === NETWORK ===
 
 suspend fun fetchRandomWord(length: Int): String = withContext(Dispatchers.IO) {
-    val urlStr = "https://trumpcat-server.politesand-ba5b0a1c.japaneast.azurecontainerapps.io/api/words/random/$length"
+    val urlStr = "${BuildConfig.BASE_URL}/api/words/random/$length"
     val url = URL(urlStr)
     val connection = url.openConnection() as HttpURLConnection
     connection.requestMethod = "GET"
@@ -624,7 +625,7 @@ suspend fun fetchRandomWord(length: Int): String = withContext(Dispatchers.IO) {
 }
 
 suspend fun checkWordValid(word: String): Boolean = withContext(Dispatchers.IO) {
-    val urlStr = "https://trumpcat-server.politesand-ba5b0a1c.japaneast.azurecontainerapps.io/api/words/check/$word"
+    val urlStr = "${BuildConfig.BASE_URL}/api/words/check/$word"
     val url = URL(urlStr)
     val connection = url.openConnection() as HttpURLConnection
     connection.requestMethod = "GET"

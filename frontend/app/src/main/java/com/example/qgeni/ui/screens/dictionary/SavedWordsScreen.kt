@@ -101,7 +101,7 @@ fun SavedWordsScreen(
                 }
                 Spacer(modifier = Modifier.weight(0.7f))
                 Text(
-                    text = "Ngăn đề đọc",
+                    text = "Từ đã tra",
                     color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.headlineMedium
                 )

@@ -75,7 +75,7 @@ class HistoryService:
     def save_practice_history(session, pr_type, pr_id, usr_id, score, duration_second):
         pr_cls, hist_cls = get_classes(pr_type)
         total_score = calculate_total_score(score, duration_second)
-
+        print("Total score calculated:", total_score)
         history = hist_cls(
             user_id=usr_id,
             practice_id=pr_id,

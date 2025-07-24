@@ -11,9 +11,6 @@ android {
         applicationId = "com.example.qgeni"
         minSdk = 24
 
-
-
-
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -26,6 +23,10 @@ android {
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64", "x86", )
         }
+
+        applicationId = "com.example.qgeni"
+        buildConfigField("String", "BASE_URL", "\"http://192.168.1.173:5000\"")
+
     }
 
     buildTypes {
@@ -37,6 +38,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -46,6 +48,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"

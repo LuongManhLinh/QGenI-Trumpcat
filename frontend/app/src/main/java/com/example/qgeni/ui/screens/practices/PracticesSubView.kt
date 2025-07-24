@@ -106,8 +106,8 @@ fun PracticeItemCard(
                         fontStyle = FontStyle.Italic
                     )
                 } else {
-                    val highestScore = practiceItem.highestScore.let { 0.0F }
-                    val latestScore = practiceItem.latestScore.let { 0.0F }
+                    val highestScore = practiceItem.highestScore
+                    val latestScore = practiceItem.latestScore
                     Column {
                         Row(
                             modifier = Modifier.fillMaxWidth(),

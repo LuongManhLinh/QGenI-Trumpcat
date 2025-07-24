@@ -86,6 +86,8 @@ class PracticeService:
             result['isFavorite'] = is_favorite is not None
             result['isNew'] = latest_score is None
             results.append(result)
+
+            print("Processed practice:", result['title'], "Latest score:", latest_score, "Max score:", max_score)
         return results
 
     @staticmethod

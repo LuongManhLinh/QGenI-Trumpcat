@@ -58,8 +58,12 @@ fun formatDateTime(dateTime: LocalDateTime?): String {
     return "$dayPart, $timePart"
 }
 
-fun formatFloat2Decimal(number: Float): String {
-    return String.format("%.2f", number)
+fun formatFloat2Decimal(number: Float?): String {
+    if (number == null) {
+        return "0.00"
+    }
+    print("Formatted number: $number")
+    return String.format("%.2f", number).also { print("Formatted $it") }
 }
 
 sealed class ErrorMessages(val message: String) {

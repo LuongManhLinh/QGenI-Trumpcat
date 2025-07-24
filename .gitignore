@@ -2,8 +2,8 @@ __pycache__/
 *.py[cod]
 .venv/
 .env/
-data/
+backend/data/raw_data
 .idea/
 *.log
 *.sqlite3
-*.db
+.gradle

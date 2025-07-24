@@ -80,7 +80,7 @@ class MascotViewModel(application: Application) : AndroidViewModel(application) 
     private fun observeIdleBubble() {
         viewModelScope.launch {
             while (true) {
-                delay(15000)
+                delay(5000)
                 val msg = getRandomBubbleContent()
                 _mascotUiState.update {
                     it.copy(showBubble = true, bubbleText = msg)
