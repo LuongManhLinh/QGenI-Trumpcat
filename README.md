@@ -167,7 +167,8 @@ python run.py
 1. Mở Android Studio
 2. Import project từ thư mục `frontend/`
 3. Sync Gradle dependencies
-4. Chạy ứng dụng trên device/emulator
+4. Cập nhật endpoint API (Backend URL) trong file `build.gradle` (và `/res/xml/network_security_config.xml` nếu như dùng `HTTP` thay vì `HTTPS`)
+5. Chạy ứng dụng trên thiết bị/emulator
 
 ## 🔧 API Documentation
 
